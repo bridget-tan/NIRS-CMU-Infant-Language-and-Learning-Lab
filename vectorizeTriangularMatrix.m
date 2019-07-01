@@ -1,5 +1,11 @@
 function vectorData = vectorizeTriangularMatrix(data)
 %% Vectorize a sFCStats lower triangular matrix exluding the diagonal
+% The order of data vectorized is as follows:
+% - - - -
+% 1 - - -
+% 2 3 - -
+% 4 5 6 -
+%
 % Args:
 %   data     - sFCStats matrix data to be vectorized
 %   num      - subject number
