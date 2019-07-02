@@ -3,6 +3,7 @@ function [] = correlationMatrixLabeling(stats, plotTitle, cLabel, cAxis, color)
 figure;
 %f=figure;
 %f.OuterPosition = f.OuterPosition+[0 2 0 0];
+stats(isnan(stats)) = 1; %replace NaNs with 1
 imagesc(stats);
 n=length(stats);
 set(gca, 'XTick',1:n);
