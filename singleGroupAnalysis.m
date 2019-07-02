@@ -60,3 +60,11 @@ GroupStats.table()
 for i=1:length(raw)
     SubjStats(i).table();
 end 
+
+%% correlation matrix
+stats = GroupStats.R(:,:,1);
+plotTitle = 'Prefrontal Cortex Resting State Connectivity';
+cLabel = 'R-values';
+cAxis = [0 1];
+color = 'jet';
+correlationMatrixLabeling(stats, plotTitle, cLabel, cAxis, color);
