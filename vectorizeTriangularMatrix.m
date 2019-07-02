@@ -16,5 +16,5 @@ function vectorData = vectorizeTriangularMatrix(data)
 len = length(data);
 vectorData = [];
 for i = 2:len
-    vectorData = [vectorData data(i,1:i-1,1)];
+    vectorData = [vectorData data(i:len,i-1,1)'];
 end
